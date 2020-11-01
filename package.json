@@ -1,0 +1,24 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Project of set games called Brain games",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gr8arty/frontend-project-lvl1.git"
+  },
+  "author": "Artyom Chuprin",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/gr8arty/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/gr8arty/frontend-project-lvl1#readme",
+  "devDependencies": {
+  }
+}

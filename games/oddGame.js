@@ -1,6 +1,6 @@
 import promptly from 'promptly';
-import greeting from './cli.js';
-import generateRandomNumber from './functions.js';
+import greeting from '../src/cli.js';
+import generateRandomNumber from '../src/index.js';
 
 export default (async () => {
   const userName = await greeting();

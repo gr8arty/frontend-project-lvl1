@@ -1,13 +1,13 @@
 import promptly from 'promptly';
 import greeting from '../src/cli.js';
-import generateRandomNumber from '../src/index.js';
+import { generateRandomNumber, gameRounds } from '../src/index.js';
 
 export default (async () => {
   const userName = await greeting();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let success = true;
-  const gameRounds = 3;
+
   for (let i = 0; i < gameRounds; i += 1) {
     const randomNumber = generateRandomNumber(0, 100);
     const answer = (randomNumber % 2 === 0 ? 'yes' : 'no');

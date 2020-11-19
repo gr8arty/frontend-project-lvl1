@@ -28,3 +28,13 @@ Asciicasts **brain-calc** game: \
 [Установка](https://asciinema.org/a/fKgOCeGBsnJ70U3MXhVJaz5Na) |
 [Выигрыш](https://asciinema.org/a/11HbWZXAszGDNSAHsjkOZLIaW) | 
 [Проигрыш](https://asciinema.org/a/3IPBxmu3ZHmdKANBPBroO8j2C)
+
+
+### Игра "НОД"
+
+Суть игры в следующем: пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+
+Asciicasts **brain-gcd** game: \
+[Установка](https://asciinema.org/a/G7EYZdhvSIm5zPvMsmb4rgWOy) |
+[Выигрыш](https://asciinema.org/a/bih7rOwNijUGw99lMJBAuKPGU) | 
+[Проигрыш](https://asciinema.org/a/PE0AjTUzHvVo1x73ZMNGgQ0mk)

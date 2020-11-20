@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import oddGame from '../games/oddGame.js';
+import { gameDescription, gameBody } from '../games/evenGame.js';
+import { runGame } from '../src/index.js';
 
-oddGame();
+runGame(gameDescription, gameBody);

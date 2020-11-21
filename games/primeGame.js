@@ -10,7 +10,7 @@ const gameBody = () => {
     }
     return 'yes';
   }(randomNumber));
-  console.log(`${randomNumber}`);
+  console.log(`Question: ${randomNumber}`);
   return result;
 };
 

@@ -48,3 +48,12 @@ Asciicasts **brain-progression** game: \
 [Установка](https://asciinema.org/a/B3pIeUqe2YF87CgBvjuT5WgeG) |
 [Выигрыш](https://asciinema.org/a/EBsUWOSfPTPHKE81asbpJGRcL) | 
 [Проигрыш](https://asciinema.org/a/8ZqSwnD24oOZBJqUdggj0KNPh)
+
+### Игра "Простое ли число?"
+
+Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число простое, или no — в обратном случае.
+
+Asciicasts **brain-prime** game: \
+[Установка](https://asciinema.org/a/WK1OghHhvez27NqwgSGWmeMl1) |
+[Выигрыш](https://asciinema.org/a/H81Czu1DGtG2atsfij8e81Ve9) | 
+[Проигрыш](https://asciinema.org/a/R4Xm1nOXXFuJGmiL3HP5nGhSx)

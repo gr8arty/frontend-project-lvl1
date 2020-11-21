@@ -38,3 +38,13 @@ Asciicasts **brain-gcd** game: \
 [Установка](https://asciinema.org/a/G7EYZdhvSIm5zPvMsmb4rgWOy) |
 [Выигрыш](https://asciinema.org/a/bih7rOwNijUGw99lMJBAuKPGU) | 
 [Проигрыш](https://asciinema.org/a/PE0AjTUzHvVo1x73ZMNGgQ0mk)
+
+
+### Игра "Арифметическая прогрессия"
+
+Показываем игроку ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
+
+Asciicasts **brain-progression** game: \
+[Установка](https://asciinema.org/a/B3pIeUqe2YF87CgBvjuT5WgeG) |
+[Выигрыш](https://asciinema.org/a/EBsUWOSfPTPHKE81asbpJGRcL) | 
+[Проигрыш](https://asciinema.org/a/8ZqSwnD24oOZBJqUdggj0KNPh)

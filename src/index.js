@@ -20,5 +20,5 @@ export const runGame = async (gameDescription, gameBody) => {
       console.log('Correct!');
     }
   }
-  console.log(success ? `Congratulation, ${playerName}!` : `Let's try again, ${playerName}!`);
+  console.log(success ? `Congratulations, ${playerName}!` : `Let's try again, ${playerName}!`);
 };

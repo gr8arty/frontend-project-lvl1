@@ -11,9 +11,9 @@ const gameBody = () => {
 
   console.log(`Question: ${firstNumber} ${mathOperator} ${secondNumber}`);
 
-  const result = (function calculate() {
-    if (mathOperator === '+') return firstNumber + secondNumber;
-    if (mathOperator === '-') return firstNumber - secondNumber;
+  const result = (function calculate(sign) {
+    if (sign === '+') return firstNumber + secondNumber;
+    if (sign === '-') return firstNumber - secondNumber;
     return firstNumber * secondNumber;
   }(mathOperator));
 

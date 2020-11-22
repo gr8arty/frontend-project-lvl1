@@ -3,24 +3,19 @@ import { generateRandomNumber } from '../src/index.js';
 const gameDescription = 'What is the result of the expression?';
 
 const gameBody = () => {
-  const num1 = generateRandomNumber(0, 30);
-  const num2 = generateRandomNumber(0, 30);
-  const operators = ['+', '-', '*'];
-  const randomOperatorsIndex = Math.floor((Math.random() * operators.length));
-  const operator = operators[randomOperatorsIndex];
+  const firstNumber = generateRandomNumber(0, 30);
+  const secondNumber = generateRandomNumber(0, 30);
+  const mathOperators = ['+', '-', '*'];
+  const randomOperatorsIndex = Math.floor((Math.random() * mathOperators.length));
+  const mathOperator = mathOperators[randomOperatorsIndex];
 
-  console.log(`Question: ${num1} ${operator} ${num2}`);
+  console.log(`Question: ${firstNumber} ${mathOperator} ${secondNumber}`);
 
-  const result = (function getResult() {
-    switch (operator) {
-      case '+':
-        return num1 + num2;
-      case '-':
-        return num1 - num2;
-      default:
-        return num1 * num2;
-    }
-  }());
+  const result = (function calculate() {
+    if (mathOperator === '+') return firstNumber + secondNumber;
+    if (mathOperator === '-') return firstNumber - secondNumber;
+    return firstNumber * secondNumber;
+  }(mathOperator));
 
   return String(result);
 };

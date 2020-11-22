@@ -16,6 +16,7 @@ const gameBody = () => {
     const hiddenNumber = progression[randomProgressionIndex];
     progression[randomProgressionIndex] = '..';
     console.log(`Question: ${progression.join(' ')}`);
+
     return hiddenNumber;
   }(startOfRange, endOfRange));
   return String(result);

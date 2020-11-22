@@ -3,15 +3,18 @@ import { generateRandomNumber } from '../src/index.js';
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const gameBody = () => {
-  const num1 = generateRandomNumber(0, 100);
-  const num2 = generateRandomNumber(0, 100);
-  console.log(`Question: ${num1} ${num2}`);
-  const result = (function gcd(a, b) {
+  const firstNumber = generateRandomNumber(0, 100);
+  const secondNumber = generateRandomNumber(0, 100);
+
+  console.log(`Question: ${firstNumber} ${secondNumber}`);
+
+  const result = (function getGcd(a, b) {
     if (!b) {
       return a;
     }
-    return gcd(b, a % b);
-  }(num1, num2));
+    return getGcd(b, a % b);
+  }(firstNumber, secondNumber));
+
   return String(result);
 };
 

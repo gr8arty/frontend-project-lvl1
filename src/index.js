@@ -1,9 +1,7 @@
 import promptly from 'promptly';
 import greeting from './cli.js';
 
-export const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
-
-export const runGame = async (gameDescription, gameBody) => {
+export default async (gameDescription, gameBody) => {
   const gameRounds = 3;
   const playerName = await greeting();
   console.log(gameDescription);

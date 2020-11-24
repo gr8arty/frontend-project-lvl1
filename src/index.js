@@ -1,10 +1,12 @@
 import promptly from 'promptly';
-import greeting from './cli.js';
 
 export default async (gameDescription, gameBody) => {
-  const gameRounds = 3;
-  const playerName = await greeting();
+  console.log('Welcome to the Brain Games!');
+  const playerName = await promptly.prompt('May I have your name? ');
+  console.log(`Hello, ${playerName}!`);
   console.log(gameDescription);
+
+  const gameRounds = 3;
   let success = true;
 
   for (let round = 0; round < gameRounds; round += 1) {

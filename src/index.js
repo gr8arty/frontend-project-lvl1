@@ -1,11 +1,14 @@
 import promptly from 'promptly';
+import { car, cdr } from '@hexlet/pairs';
 
-export default async (gameDescription, gameBody) => {
+export default async (gameInputData) => {
   console.log('Welcome to the Brain Games!');
   const playerName = await promptly.prompt('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
-  console.log(gameDescription);
 
+  const gameDescription = car(gameInputData);
+  const gameBody = cdr(gameInputData);
+  console.log(gameDescription);
   const gameRounds = 3;
   let success = true;
 

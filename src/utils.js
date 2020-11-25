@@ -1,3 +1,7 @@
+import { cons } from '@hexlet/pairs';
+
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-export default generateRandomNumber;
+const makeGame = (description, body) => cons(description, body);
+
+export { generateRandomNumber, makeGame };

@@ -1,4 +1,5 @@
-import { generateRandomNumber, makeGame } from '../utils.js';
+import generateRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
 const getGcd = (a, b) => {
   if (!b) {
@@ -19,6 +20,4 @@ const gameBody = () => {
   return String(result);
 };
 
-const brainGcd = makeGame(gameDescription, gameBody);
-
-export default brainGcd;
+export default runGame(gameDescription, gameBody);

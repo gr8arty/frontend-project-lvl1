@@ -1,4 +1,5 @@
-import { generateRandomNumber, makeGame } from '../utils.js';
+import generateRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
 const generateProgression = () => {
   const progression = [];
@@ -23,6 +24,4 @@ const gameBody = () => {
   return String(hiddenNumber);
 };
 
-const brainProgression = makeGame(gameDescription, gameBody);
-
-export default brainProgression;
+export default runGame(gameDescription, gameBody);

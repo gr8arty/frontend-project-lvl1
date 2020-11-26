@@ -1,4 +1,5 @@
-import { generateRandomNumber, makeGame } from '../utils.js';
+import generateRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {
@@ -17,6 +18,4 @@ const gameBody = () => {
   return result;
 };
 
-const brainPrime = makeGame(gameDescription, gameBody);
-
-export default brainPrime;
+export default runGame(gameDescription, gameBody);

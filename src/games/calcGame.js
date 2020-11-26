@@ -1,7 +1,8 @@
-import { generateRandomNumber, makeGame } from '../utils.js';
+import generateRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
-const calculate = (operation, op1, op2) => {
-  switch (operation) {
+const calculate = (operator, op1, op2) => {
+  switch (operator) {
     case '+':
       return op1 + op2;
     case '-':
@@ -9,7 +10,7 @@ const calculate = (operation, op1, op2) => {
     case '*':
       return op1 * op2;
     default:
-      return NaN;
+      throw new Error(`Unknown operator:, ${operator}`);
   }
 };
 
@@ -28,6 +29,4 @@ const gameBody = () => {
   return String(result);
 };
 
-const brainCalc = makeGame(gameDescription, gameBody);
-
-export default brainCalc;
+export default runGame(gameDescription, gameBody);

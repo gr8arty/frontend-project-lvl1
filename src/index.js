@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default (gameDescription, gameBody) => () => {
+export default (gameDescription, runGame) => () => {
   console.log('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
@@ -10,7 +10,7 @@ export default (gameDescription, gameBody) => () => {
   let success = true;
 
   for (let round = 0; round < gameRounds; round += 1) {
-    const roundResult = gameBody();
+    const roundResult = runGame();
     const playerChoice = readlineSync.question('Your answer: ');
     if (playerChoice !== roundResult) {
       success = false;

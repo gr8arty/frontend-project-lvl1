@@ -1,5 +1,5 @@
-import generateRandomNumber from '../utils.js';
-import runGame from '../index.js';
+import { generateRandomNumber, makeQuestion } from '../utils.js';
+import makeGame from '../index.js';
 
 const generateProgression = () => {
   const progression = [];
@@ -12,16 +12,16 @@ const generateProgression = () => {
 };
 
 const gameDescription = 'What number is missing in the progression?';
-const gameBody = () => {
+const runGame = () => {
   const progression = generateProgression();
 
   const randomProgressionIndex = generateRandomNumber(0, progression.length);
   const hiddenNumber = progression[randomProgressionIndex];
   const maskSymbol = '..';
   progression[randomProgressionIndex] = maskSymbol;
-  console.log(`Question: ${progression.join(' ')}`);
+  makeQuestion(progression.join(' '));
 
   return String(hiddenNumber);
 };
 
-export default runGame(gameDescription, gameBody);
+export default makeGame(gameDescription, runGame);

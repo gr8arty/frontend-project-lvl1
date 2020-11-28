@@ -1,4 +1,4 @@
-import { generateRandomNumber, makeQuestion } from '../utils.js';
+import generateRandomNumber from '../utils.js';
 import makeGame from '../index.js';
 
 const generateProgression = () => {
@@ -11,17 +11,19 @@ const generateProgression = () => {
   return progression;
 };
 
-const gameDescription = 'What number is missing in the progression?';
-const runGame = () => {
-  const progression = generateProgression();
+const game = {};
+game.description = 'What number is missing in the progression?';
 
+game.runGame = () => {
+  const progression = generateProgression();
   const randomProgressionIndex = generateRandomNumber(0, progression.length);
+
   const hiddenNumber = progression[randomProgressionIndex];
   const maskSymbol = '..';
   progression[randomProgressionIndex] = maskSymbol;
-  makeQuestion(progression.join(' '));
+  game.question = progression.join(' ');
 
   return String(hiddenNumber);
 };
 
-export default makeGame(gameDescription, runGame);
+export default makeGame(game);

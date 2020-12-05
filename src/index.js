@@ -6,20 +6,18 @@ export default (game) => () => {
   console.log(`Hello, ${playerName}!`);
 
   console.log(game.description);
-  const gameRounds = 3;
-  let success = true;
+  const totalRounds = 3;
 
-  for (let round = 0; round < gameRounds; round += 1) {
-    const roundResult = game.runGame();
-    console.log(`Question: ${game.question}`);
-    const playerChoice = readlineSync.question('Your answer: ');
-    if (playerChoice !== roundResult) {
-      success = false;
-      console.log(`'${playerChoice}' is wrong answer ;(. Correct answer was '${roundResult}'.`);
-      break;
-    } else {
-      console.log('Correct!');
+  for (let round = 0; round < totalRounds; round += 1) {
+    const [question, answer] = game.prepareGame();
+    console.log(`Question: ${question}`);
+    const playerInput = readlineSync.question('Your answer: ');
+    if (playerInput !== answer) {
+      console.log(`'${playerInput}' is wrong answer ;(. Correct answer was '${answer}'.`);
+      console.log(`Let's try again, ${playerName}!`);
+      return;
     }
+    console.log('Correct!');
   }
-  console.log(success ? `Congratulations, ${playerName}!` : `Let's try again, ${playerName}!`);
+  console.log(`Congratulations, ${playerName}!`);
 };

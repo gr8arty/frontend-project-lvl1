@@ -14,20 +14,21 @@ const calculate = (operator, op1, op2) => {
   }
 };
 
-const game = {};
-game.description = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
-game.runGame = () => {
+const prepareGame = () => {
   const firstNumber = generateRandomNumber(0, 30);
   const secondNumber = generateRandomNumber(0, 30);
   const mathOperators = ['+', '-', '*'];
   const randomOperatorsIndex = generateRandomNumber(0, mathOperators.length);
   const mathOperator = mathOperators[randomOperatorsIndex];
 
-  game.question = `${firstNumber} ${mathOperator} ${secondNumber}`;
+  const question = `${firstNumber} ${mathOperator} ${secondNumber}`;
+  const answer = String(calculate(mathOperator, firstNumber, secondNumber));
 
-  const result = calculate(mathOperator, firstNumber, secondNumber);
-  return String(result);
+  return [question, answer];
 };
+
+const game = { description, prepareGame };
 
 export default makeGame(game);
